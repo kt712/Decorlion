@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Decorlion</title>
+    <link rel="icon" href="Resources/img/favicon.ico" type="image/x-icon" />
+    <link href="Resources/css/all-css.css" rel="stylesheet" type="text/css">
+    <link href="Resources/css/set1.css" rel="stylesheet" type="text/css">
+    <link href="Resources/css/one-page.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="Resources/reset.css">
+    <link href="Resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        .n {
+            background: url(Resources/img/contact-bg.jpg) no-repeat bottom;
+        }
+        .collapse .nav li a:hover{
+            color:yellow;
+        }
+        input[type=text],input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        color:black;
+        }
+        
+        select{
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        color:black; 
+        }
+        button {
+            border: 2px solid #fecb38;
+            color: #fff;
+            letter-spacing: 1px;
+            line-height: normal;
+            padding: 14px 30px;
+            text-transform: uppercase;
+            font-weight: 800;
+            background: none!important;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        button:hover {
+            border: 2px solid #fecb38;
+            background:#fecb38!important;
+            color:#000!important;
+        }
+        .request {
+        padding-left: 15px;
+        padding-right: 15px;
+        }
+        .request input{
+            width:30% ;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <div id="preloader"></div>
+    <!-- Starting of navbar-->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="Resources/img/logo.jpg" alt="logo" title="" style="height: 50px; width: 50px;"/></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li> <a class="page-scroll" href="client.html">HOME</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="n">
+        <section class="what-we" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2 class="wow fadeInDown" style="color:white">Request Service</h2>
+                    </div>
+                </div>
+            </div>
+           
+            <form action="">
+                <div class="request">
+                  <label for="fname">First Name</label> <br>
+                  <input type="text" id="fname" name="firstname" placeholder="Your first name.." required> <br>
+              
+                  <label for="lname">Last Name</label> <br>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name.." required><br>
+
+                  <label for="Email">Email:</label> <br>
+                  <input type="email" id="Email" name="Email" placeholder="xxx123@yahoo.com" required><br> <br>
+              
+                  <select id="Order" name="Order" required>
+                    <option value="">Choose Your Order</option>
+                    <option value="1">Living Room</option>
+                    <option value="2">Bed Room</option>
+                    <option value="3">Kitchen</option>
+                    <option value="4">Community Halls</option>
+                    <option value="5">Restuarants</option>
+                  </select> <br>
+              
+                  <button id="submitForm">Submit</button> <br>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy;Decorlion 2023</span>
+                </div>
+                <div class="col-md-4  col-sm-4 footer-c text-right">
+                    <div class="social-icons"><a href="#"><i class="fa fa-facebook fa-lg"></i></a><a href="#"><i class="fa fa-twitter fa-lg"></i></a><a href="#"><i class="fa fa-rss fa-lg"></i></a><a href="#"><i class="fa fa-google-plus fa-lg"></i></a><a href="#"><i class="fa fa-skype fa-lg"></i></a><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        submitForm.click(function() {
+            if (this.fname == "" && this.lname == "" && this.Email == ""  &&this.Order == "") {
+    
+            alert('PLEASE ENTER YOUR DETAILS FOR ORDERS')
+
+            }
+            if (this.fname == "") {
+                alert('PLEASE ENTER YOUR NAME')
+            }
+            if (this.lname == "") {
+            return alert('PLEASE ENTER YOUR LASTNAME')
+            }
+            if (this.Email == "") {
+            return alert('PLEASE ENTER YOUR Email')
+            }
+            if(this.Order == ""){
+                return alert('PLEASE ENTER SELECT SERVICE TYPE');
+            }
+            else {
+            this.fname = "";
+            this.lname = "";
+            this.Email = "";
+            this.Order= "";
+
+            return alert(' You have successfully requested for a service')
+            }
+        })
+     </script>
+</body>
+
+</html>
+<!-- jQuery -->
+<script src="Resources/js/jquery-2.2.4.js"></script>
+<script src="Resources/js/scrolltopcontrol.js"></script>
+<script src="Resources/js/bootstrap.min.js"></script>
+<script src="Resources/js/jquery.easing.min.js"></script>
+<script src="Resources/js/creative.min.js"></script>
+
+<!-- jQuery -->
